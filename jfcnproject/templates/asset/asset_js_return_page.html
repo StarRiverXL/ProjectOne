@@ -1,0 +1,50 @@
+    <div class="link_zcgl_fot">
+        <table>
+            <tr>
+                <th> 序号  </th>
+                <th> IP   </th>
+                <th> 主机名    </th>
+                <th> 所属项目  </th>
+                <th> 操作系统  </th>
+                <th> CPU    </th>
+                <th> 内存(G) </th>
+                <th> 硬盘    </th>
+                <th> 操作    </th>
+                <th> 备注    </th>
+            </tr>
+            {% for asset in asset_management_list %}
+                <tr>
+                    <td> {{ asset.id }}</td>
+                    <td> {{ asset.ip }}</td>
+                    <td> {{ asset.host_name }}</td>
+                    <td> {{ asset.project }}</td>
+                    <td> {{ asset.system }}</td>
+                    <td> {{ asset.cpu }}</td>
+                    <td> {{ asset.memory }}</td>
+                    <td> {{ asset.hard }}</td>
+                    <td>
+                        <a href="{% url 'asset:asset' option='edit_asset' id=asset.id %}"><button>编辑</button></a>
+                        <a href="{% url 'asset:asset' option='del_asset' id=asset.id %}"><button>删除</button></a>
+                    </td>
+                    <td> {{ asset.remark }}</td>
+                </tr>
+                {% empty %}
+                    <td>未查询到资产</td>
+            {% endfor %}
+
+        </table>
+        <div class="pages">
+                 {% if asset_management_list %}
+                  <!-- 如果当前页还有上一页，显示一个上一页的按钮 -->
+                  {% if asset_management_list.has_previous %}
+                    <a href="?page={{ asset_management_list.previous_page_number }}&asset_search={{ result.asset_search }}&pagenumber={{ page_condition.pagenumber }}&pagenumber_switch={{ page_condition.pagenumber_switch }}">上一页</a>
+                  {% endif %}
+                  <!-- 显示当前页面信息 -->
+                  第 {{ asset_management_list.number }} 页 / 共 {{ asset_management_list.paginator.num_pages }} 页
+                  <!-- 如果当前页还有下一页，显示一个下一页的按钮 -->
+                  {% if asset_management_list.has_next %}
+                    <a href="?page={{ asset_management_list.next_page_number }}&asset_search={{ result.asset_search }}&pagenumber={{ page_condition.pagenumber }}&pagenumber_switch={{ page_condition.pagenumber_switch }}">下一页</a>
+                  {% endif %}
+                {% endif %}
+        </div>
+    </div>

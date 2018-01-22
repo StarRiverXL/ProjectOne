@@ -1,0 +1,23 @@
+/* 
+* @Author: anchen
+* @Date:   2017-12-06 13:38:54
+* @Last Modified by:   anchen
+* @Last Modified time: 2017-12-06 14:31:03
+*/
+body, h1, h2, h3, h4, h5, h6, p, form,div{margin:0;}
+ol,ul,div{margin:0; padding:0;}
+body{font-family: '微软雅黑';}
+a{text-decoration: none;color: #000;}
+a:hover{}
+img{border:0;}
+ul{list-style: none;}
+input,button,textarea{outline: none;}
+.myclear:after{
+    clear:both;
+    content:" ";
+    display:block;
+    height:0;
+}
+.myclear {
+  zoom: 1;
+}

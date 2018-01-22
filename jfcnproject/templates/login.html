@@ -1,0 +1,45 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="https://v3.bootcss.com/favicon.ico">
+    <title>登陆界面</title>
+    <link type="text/css" rel="stylesheet" href="{% static 'asset/css/login/bootstrap.min.css' %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'asset/css/login/ie10-viewport-bug-workaround.css' %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'asset/css/login/signin.css' %}">
+    <script type="text/javascript" src="{% static 'asset/js/login/ie-emulation-modes-warning.js' %}"></script>
+    <script type="text/javascript" src="{% static 'asset/js/login/ie10-viewport-bug-workaround.js' %}"></script>
+    <script type="text/javascript" src="{% static 'asset/js/login/html5shiv.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'asset/js/login/respond.min.js' %}"></script>
+  </head>
+  <body>
+    <div class="container">
+      <form class="form-signin" action="{% url 'public:login' %}" method="post">
+        <h2 class="form-signin-heading">Please sign in</h2>
+        <label class="sr-only">username</label>
+        <input type="text" name="username" id="inputEmail" class="form-control" placeholder="username" required="" autofocus="">
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" name="password" id="inputPassword" class="form-control" placeholder="password" required="">
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      </form>
+    </div>
+    {# 下面仅为测试使用 #}
+    <h1>{{ login_info_list.info }}</h1>
+    {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+            messege框架的使用结果： {{ message }}
+            {% endfor %}
+        </ul>
+    {% endif %}
+  </body>
+</html>

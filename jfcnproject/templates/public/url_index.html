@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block user_login %}
+    {% if request.session.username %}
+        <h4 style='font-family:楷体;'>用户：{{ request.session.username }}
+            <a href=" {% url 'public:login' %}?logoutuser={{ request.session.username }}"> [退出] </a></h4>
+    {% else %}
+        <h3 style='font-family:楷体;'><a href="{% url 'public:login' %}">请登陆</a></h3>
+    {% endif %}
+{% endblock user_login %}
+
+{% block body_content %}
+<div class="link_zddh" style="display:block">
+    <ul>
+        {% for site in site_nav_list %}
+            <li>
+                <h3>{{ site.url }}</h3>
+                <p><a href="{{ site.url }}" target="_blank">{{ site.name }}</a></p>
+            </li>
+        {% empty %}
+            暂未查询到站点！
+        {% endfor %}
+    </ul>
+</div>
+{% endblock body_content %}
+
+
+
+
+
+
+

@@ -1,0 +1,182 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block head_content %}
+<script type="text/javascript" src="{% static 'asset/js/asset.js' %}"></script>
+{% endblock head_content %}
+
+{% block user_login %}
+    {% if request.session.username %}
+        <h4 style='font-family:楷体;'>用户：{{ request.session.username }}
+            <a href=" {% url 'public:login' %}?logoutuser={{ request.session.username }}"> [退出] </a></h4>
+    {% else %}
+        <h3 style='font-family:楷体;'><a href="{% url 'public:login' %}">请登陆</a></h3>
+    {% endif %}
+{% endblock user_login %}
+
+{% block body_content %}
+<div class="link_zcgl" style="display:block">
+    <div class="link_zcgl_head" >
+        <a href="javascript:;" class="addEqu addEq" data-id="0">添加设备</a>
+        <span>
+            <form class="search_form" role="search" method="get" action="{% url 'asset:asset' option='search' id=0 %}?pagenumber={{ page_condition.pagenumber }}">
+                <input type="search" class="search" name="asset_search" placeholder="搜索IP、主机名、项目..." required>
+                <input type="submit" class="searchBtn" value="搜索">
+                <input type="submit" class="outBtn" value="导出">
+            </form>
+        </span>
+    </div>
+
+    <div class="link_zcgl_mid">
+        展示行数：
+        <select name="" id="">
+            {% if page_condition.pagenumber >= 10 %}
+                <option value="{{ page_condition.pagenumber }}" selected = "selected">{{ page_condition.pagenumber }}</option>
+            {% endif %}
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+                <option value="40">40</option>
+        </select>
+    </div>
+
+    <div class="link_zcgl_fot">
+        <table>
+            <tr>
+                <th> 序号  </th>
+                <th> IP   </th>
+                <th> 主机名    </th>
+                <th> 所属项目  </th>
+                <th> 操作系统  </th>
+                <th> CPU    </th>
+                <th> 内存(G) </th>
+                <th> 硬盘    </th>
+                <th> 操作    </th>
+                <th> 备注    </th>
+            </tr>
+            {% for asset in asset_management_list %}
+                <tr>
+                    <td> {{ asset.id }}</td>
+                    <td> {{ asset.ip }}</td>
+                    <td> {{ asset.host_name }}</td>
+                    <td> {{ asset.project }}</td>
+                    <td> {{ asset.system }}</td>
+                    <td> {{ asset.cpu }}</td>
+                    <td> {{ asset.memory }}</td>
+                    <td> {{ asset.hard }}</td>
+                    <td>
+                        <!--<a class="edit" data-id="{{ asset.id }}"><button>编辑</button></a>-->
+                        <a href="{% url 'asset:asset' option='edit_asset' id=asset.id %}"><button>编辑</button></a>
+                        <a href="{% url 'asset:asset' option='del_asset' id=asset.id %}" onClick="delete_confirm" > <button>删除</button></a>
+                    </td>
+                    <td> {{ asset.remark }}</td>
+                </tr>
+                {% empty %}
+                    <td>未查询到资产</td>
+            {% endfor %}
+
+        </table>
+        <div class="pages">
+                 {% if asset_management_list %}
+                  <!-- 如果当前页还有上一页，显示一个上一页的按钮 -->
+                  {% if asset_management_list.has_previous %}
+                    <a href="?page={{ asset_management_list.previous_page_number }}&asset_search={{ page_condition.asset_search }}&pagenumber={{ page_condition.pagenumber }}">上一页</a>
+                  {% endif %}
+                  <!-- 显示当前页面信息 -->
+                  第 {{ asset_management_list.number }} 页 / 共 {{ asset_management_list.paginator.num_pages }} 页
+                  <!-- 如果当前页还有下一页，显示一个下一页的按钮 -->
+                  {% if asset_management_list.has_next %}
+                    <a href="?page={{ asset_management_list.next_page_number }}&asset_search={{ page_condition.asset_search }}&pagenumber={{ page_condition.pagenumber }}">下一页</a>
+                  {% endif %}
+                {% endif %}
+        </div>
+    </div>
+</div>
+
+<form action="{% url 'asset:asset' option='add_asset' id=0 %}" method="post">
+    <div class="canopy">
+       <div class="ceng">
+            <h3>添加设备</h3>
+            <table>
+                <tr>
+                    <td>IP</td>
+                    <td><input type="text" name="ip"></td>
+                </tr>
+                <tr>
+                    <td>主机名</td>
+                    <td><input type="text" name="host_name" ></td>
+                </tr>
+                <tr>
+                    <td>所属项目</td>
+                    <td><input type="text" name="project" ></td>
+                </tr>
+                <tr>
+                    <td>操作系统</td>
+                    <td><input type="text" name="system" ></td>
+                </tr>
+                <tr>
+                    <td>CPU</td>
+                    <td><input type="text" name="cpu" ></td>
+                </tr>
+                <tr>
+                    <td>内存(G)</td>
+                    <td><input type="text" name="memory" ></td>
+                </tr>
+                <tr>
+                    <td>硬盘(G)</td>
+                    <td><input type="text" name="hard" ></td>
+                </tr>
+                <tr>
+                    <td>备注</td>
+                    <td><input type="text" name="remark" ></td>
+                </tr>
+            </table>
+            <div class="btn">
+                <input type="submit" value="提交">
+                <a href="javascript:;" class="reset">取消</a>
+            </div>
+        </div>
+    </div>
+</form>
+
+<script type="text/javascript">
+//{# 解决展示行数搜索问题 #}
+var selct=document.querySelector('.link_zcgl_mid select');
+        selct.onchange=function(ev){
+            var ev=ev || window.event;
+            var targetVal=ev.target.value;
+            var xhr=null;
+            if(window.XMLHttpRequest){   // 创建对象
+                xhr=new XMLHttpRequest();
+                }else{
+                    xhr=new ActiveXObject("Microsoft.XMLHTTP"); // IE
+                }
+                xhr.open('GET','{% url "asset:asset" option="index" id=0 %}?&pagenumber_switch=1&pagenumber='+targetVal,true);
+                xhr.send();
+                xhr.onreadystatechange=function(){
+                    if(xhr.readyState==4 && xhr.status==200){
+//{#                    console.log(xhr.readyState);#}
+                        document.querySelector(".link_zcgl_fot").innerHTML=xhr.responseText;
+//{#                    var a = document.querySelector(".link_zcgl_fot");#}
+//{#                    console.log(a);#}
+//{#                    a.innerHTML=xhr.responseText;#}
+                    }
+                }
+            };
+
+
+function delete_confirm(e)
+{
+    if (event.srcElement.outerText == "删除")
+    {
+        event.returnValue = confirm("删除后不可恢复的，你确认要删除吗？");
+    }
+}
+document.onclick = delete_confirm;
+
+</script>
+{% endblock body_content %}
+
+
+
+

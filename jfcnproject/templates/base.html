@@ -1,0 +1,82 @@
+{% load staticfiles %}
+{% load jfcn_tags %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="{% static 'asset/css/repeat.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'asset/css/index.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'smallfun/css/yunwei.css' %}" />
+        <script type="text/javascript" src="{% static 'asset/js/jquery-2.1.1.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'asset/js/index.js' %}"></script>
+
+        <link rel="stylesheet" type="text/css" href="{% static 'nav/css/nav.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'nav/font/iconfont.css' %}">
+        <script type="text/javascript" src="{% static 'nav/js/jquery.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'nav/js/nav.js' %}"></script>
+
+        {% block head_content %}
+        {% endblock head_content %}
+
+    </head>
+    <body>
+
+        <div class="header myclear">
+            <div class="head_l">运维管理平台</div>
+            <div class="head_m">
+
+            </div>
+            <div class="head_r"><img src="{% static 'asset/img/load.png' %}" alt="" />
+                {% block user_login %}
+                {% endblock user_login %}
+            </div>
+        </div>
+
+        <div class="cont">
+            <ul class="cont_l">
+                <li><a href="{% url 'public:index' %}">网站首页</a></li>
+                <li><a href="javascript:ready;">站点导航</a>
+                    <ul>
+                        <li><a href="{% url 'public:urlindex' %}?option=xx">XX系统</a></li>
+                        <li><a href="{% url 'public:urlindex' %}?option=yy">YY系统</a></li>
+                    </ul>
+                </li>
+                <li><a href="{% url 'asset:asset' option='index' id=0 %}">资产管理</a></li>
+                <li><a href="{% url 'servers:appopt' option='index' %}">应用管理</a></li>
+                <li><a href="{% url 'ywdocument:index' %}">运维文档</a></li>
+                <li><a href="{% url 'servers:serveropt' %}">服务器管理</a></li>
+                <li><a href="javascript:ready;">其他功能</a>
+                    <ul>
+                        <li><a href="{% url 'samllfun:address' %}">运维通讯录</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="cont_r">
+                {% block body_content %}
+                {% endblock body_content %}
+            </div>
+        </div>
+
+        <!--<script>-->
+            <!--window.onload=function(){-->
+                <!--var oBox=document.querySelector('.cont_l');-->
+                <!--var aLI=oBox.querySelectorAll('li');-->
+                <!--var loca=window.location.pathname;-->
+                <!--for (var i=0;i<aLI.length;i++){-->
+                    <!--var aHref=aLI[i].getElementsByTagName('a')[0].href;-->
+                    <!--aLI[i].index=i;-->
+                    <!--if(aHref.indexOf('http')!=-1){-->
+                        <!--aLI[i].getElementsByTagName('ul')[0].className="ulBlock"-->
+                    <!--}-->
+
+                <!--}-->
+            <!--}-->
+        <!--</script>-->
+
+    </body>
+</html>
+
+
+
+
+
