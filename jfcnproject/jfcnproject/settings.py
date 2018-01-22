@@ -173,7 +173,8 @@ LOGGING = {
         'default': {
             'level': 'DEBUG',
             'class': 'logging.handlers.RotatingFileHandler',
-            'filename': "logs\\all.log",     # 日志输出文件  [os.path.join(BASE_DIR, 'templates')],
+            # 'filename': "logs\\all.log",     # 日志输出文件  [os.path.join(BASE_DIR, 'templates')],
+            'filename': os.path.join(BASE_DIR, "logs", "all.log"),     # 日志输出文件
             'maxBytes': 1024*1024*5,                  # 文件大小
             'backupCount': 5,                         # 备份份数
             'formatter': 'standard',                   # 使用哪种formatters日志格式

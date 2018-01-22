@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 from django.shortcuts import render
 from django.http import HttpResponse, FileResponse
-import json, time
+import json, time, platform
 from .data.getlog import GetServerData, ServerOptControl
 from .data.getdbinformation import get_db_data
 from .data.appoptcode import AppOpt
@@ -15,7 +15,16 @@ logger = logging.getLogger('django')
 
 def download_file(request):
     download_log_name = request.GET.get('download_log_name', None)
-    file_name = "data\\downloadlog\\%s.log" % download_log_name
+    system_version = platform.system()
+    if system_version == "Linux":
+        logger.info("进入日志下载视图,判断当前操作系统为 linux,成功设置日志路径")
+        file_name = "data/downloadlog/%s.log" % download_log_name
+    elif system_version == "Windows":
+        logger.info("进入日志下载视图,判断当前操作系统为 Windows,成功设置日志路径")
+        file_name = "data\\downloadlog\\%s.log" % download_log_name
+    else:
+        logger.info("进入日志下载视图,判断当前操作系统失败,默认设置windows日志路径")
+        file_name = "data\\downloadlog\\%s.log" % download_log_name
     logger.info("进入日志下载视图，请求参数为：%s" % download_log_name)
     response = FileResponse(file_iterator(file_name))
     response['Content-Type'] = 'application/octet-stream'

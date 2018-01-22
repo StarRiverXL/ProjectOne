@@ -2438,3 +2438,171 @@ TypeError: not all arguments converted during string formatting
 [2018-01-19 14:52:39,779] [INFO] [D:\workspace\jfcnproject\smallfun\views.py address views line:10] 获取运维通讯录
 [2018-01-19 14:52:39,780] [INFO] [D:\workspace\jfcnproject\smallfun\views.py address views line:12] 返回运维通讯录结果成功
 [2018-01-19 14:52:39,786] [INFO] [D:\jfcn\lib\site-packages\django\core\servers\basehttp.py log_message basehttp line:124] "GET /samllfun/address/ HTTP/1.1" 200 4547
+[2018-01-22 17:12:45,311] [INFO] [D:\workspace\ProjectOne\jfcnproject\ywdocument\views.py IndexView views line:17] 进入应用运维资料管理类视图
+[2018-01-22 17:12:45,312] [INFO] [D:\workspace\ProjectOne\jfcnproject\ywdocument\views.py PostDetailView views line:139] 进入应用运维资料详细类视图
+[2018-01-22 17:12:45,313] [INFO] [D:\workspace\ProjectOne\jfcnproject\ywdocument\views.py CategoryView views line:179] 进入应用运维资料分类类视图
+[2018-01-22 17:12:45,314] [INFO] [D:\workspace\ProjectOne\jfcnproject\ywdocument\views.py TagView views line:195] 进入标签类视图
+[2018-01-22 17:13:07,146] [INFO] [D:\workspace\ProjectOne\jfcnproject\public\views.py checkuser views line:16] 进入用户登陆视图
+[2018-01-22 17:13:07,147] [INFO] [D:\workspace\ProjectOne\jfcnproject\public\views.py checkuser views line:54] 用户未登陆，跳转至登陆界面
+[2018-01-22 17:13:07,162] [INFO] [D:\jfcn\lib\site-packages\django\core\servers\basehttp.py log_message basehttp line:124] "GET / HTTP/1.1" 200 2046
+[2018-01-22 17:13:07,483] [INFO] [D:\jfcn\lib\site-packages\django\core\servers\basehttp.py log_message basehttp line:124] "GET /static/asset/css/login/signin.css HTTP/1.1" 200 833
+[2018-01-22 17:13:07,483] [INFO] [D:\jfcn\lib\site-packages\django\core\servers\basehttp.py log_message basehttp line:124] "GET /static/asset/css/login/ie10-viewport-bug-workaround.css HTTP/1.1" 200 446
+[2018-01-22 17:13:07,487] [INFO] [D:\jfcn\lib\site-packages\django\core\servers\basehttp.py log_message basehttp line:124] "GET /static/asset/js/login/ie-emulation-modes-warning.js HTTP/1.1" 200 2181
+[2018-01-22 17:13:07,488] [INFO] [D:\jfcn\lib\site-packages\django\core\servers\basehttp.py log_message basehttp line:124] "GET /static/asset/css/login/bootstrap.min.css HTTP/1.1" 200 121205
+[2018-01-22 17:13:07,488] [INFO] [D:\jfcn\lib\site-packages\django\core\servers\basehttp.py log_message basehttp line:124] "GET /static/asset/js/login/ie10-viewport-bug-workaround.js HTTP/1.1" 200 664
+[2018-01-22 17:13:07,488] [INFO] [D:\jfcn\lib\site-packages\django\core\servers\basehttp.py log_message basehttp line:124] "GET /static/asset/js/login/html5shiv.min.js HTTP/1.1" 200 2733
+[2018-01-22 17:13:07,489] [INFO] [D:\jfcn\lib\site-packages\django\core\servers\basehttp.py log_message basehttp line:124] "GET /static/asset/js/login/respond.min.js HTTP/1.1" 200 4381
+[2018-01-22 17:13:13,237] [INFO] [D:\workspace\ProjectOne\jfcnproject\public\views.py checkuser views line:16] 进入用户登陆视图
+[2018-01-22 17:13:13,240] [INFO] [D:\workspace\ProjectOne\jfcnproject\public\views.py checkuser views line:21] 开始登陆系统，用户名:[XH] 密码:[1234qwer] 
+[2018-01-22 17:13:13,298] [INFO] [D:\workspace\ProjectOne\jfcnproject\public\views.py checkuser views line:35] 登陆成功,用户名:[XH] 跳转到到系统首页
+[2018-01-22 17:13:13,309] [INFO] [D:\jfcn\lib\site-packages\django\core\servers\basehttp.py log_message basehttp line:124] "POST /public/login/ HTTP/1.1" 302 0
+[2018-01-22 17:13:13,311] [INFO] [D:\workspace\ProjectOne\jfcnproject\public\views.py indexpage views line:79] 进入网站首页
+[2018-01-22 17:13:13,311] [INFO] [D:\workspace\ProjectOne\jfcnproject\public\views.py indexpage views line:80] 返回首页数据
+[2018-01-22 17:13:13,321] [INFO] [D:\jfcn\lib\site-packages\django\core\servers\basehttp.py log_message basehttp line:124] "GET /public/index/ HTTP/1.1" 200 10646
+[2018-01-22 17:13:13,337] [INFO] [D:\jfcn\lib\site-packages\django\core\servers\basehttp.py log_message basehttp line:124] "GET /static/asset/css/repeat.css HTTP/1.1" 200 501
+[2018-01-22 17:13:13,339] [INFO] [D:\jfcn\lib\site-packages\django\core\servers\basehttp.py log_message basehttp line:124] "GET /static/asset/css/index.css HTTP/1.1" 200 3913
+[2018-01-22 17:13:13,341] [INFO] [D:\jfcn\lib\site-packages\django\core\servers\basehttp.py log_message basehttp line:124] "GET /static/nav/css/nav.css HTTP/1.1" 200 2214
+[2018-01-22 17:13:13,345] [INFO] [D:\jfcn\lib\site-packages\django\core\servers\basehttp.py log_message basehttp line:124] "GET /static/smallfun/css/yunwei.css HTTP/1.1" 200 951
+[2018-01-22 17:13:13,345] [INFO] [D:\jfcn\lib\site-packages\django\core\servers\basehttp.py log_message basehttp line:124] "GET /static/asset/js/index.js HTTP/1.1" 200 961
+[2018-01-22 17:13:13,346] [INFO] [D:\jfcn\lib\site-packages\django\core\servers\basehttp.py log_message basehttp line:124] "GET /static/nav/font/iconfont.css HTTP/1.1" 200 14108
+[2018-01-22 17:13:13,347] [INFO] [D:\jfcn\lib\site-packages\django\core\servers\basehttp.py log_message basehttp line:124] "GET /static/asset/js/jquery-2.1.1.min.js HTTP/1.1" 200 84284
+[2018-01-22 17:13:13,347] [INFO] [D:\jfcn\lib\site-packages\django\core\servers\basehttp.py log_message basehttp line:124] "GET /static/public/index/css/font-awesome.css HTTP/1.1" 200 30548
+[2018-01-22 17:13:13,348] [INFO] [D:\jfcn\lib\site-packages\django\core\servers\basehttp.py log_message basehttp line:124] "GET /static/public/index/css/bootstrap_noresponsive.css HTTP/1.1" 200 152767
+[2018-01-22 17:13:13,354] [INFO] [D:\jfcn\lib\site-packages\django\core\servers\basehttp.py log_message basehttp line:124] "GET /static/public/index/css/bk.css HTTP/1.1" 200 149032
+[2018-01-22 17:13:13,361] [INFO] [D:\jfcn\lib\site-packages\django\core\servers\basehttp.py log_message basehttp line:124] "GET /static/public/index/css/main.css HTTP/1.1" 200 8897
+[2018-01-22 17:13:13,363] [INFO] [D:\jfcn\lib\site-packages\django\core\servers\basehttp.py log_message basehttp line:124] "GET /static/public/index/js/index.js HTTP/1.1" 200 671
+[2018-01-22 17:13:13,365] [INFO] [D:\jfcn\lib\site-packages\django\core\servers\basehttp.py log_message basehttp line:124] "GET /static/nav/js/nav.js HTTP/1.1" 200 1027
+[2018-01-22 17:13:13,367] [INFO] [D:\jfcn\lib\site-packages\django\core\servers\basehttp.py log_message basehttp line:124] "GET /static/nav/js/jquery.min.js HTTP/1.1" 200 93106
+[2018-01-22 17:13:13,367] [INFO] [D:\jfcn\lib\site-packages\django\core\servers\basehttp.py log_message basehttp line:124] "GET /static/public/index/js/jquery-1.10.2.min.js HTTP/1.1" 200 93113
+[2018-01-22 17:13:13,368] [INFO] [D:\jfcn\lib\site-packages\django\core\servers\basehttp.py log_message basehttp line:124] "GET /static/public/index/js/bootstrap.min.js HTTP/1.1" 200 36822
+[2018-01-22 17:13:13,371] [INFO] [D:\jfcn\lib\site-packages\django\core\servers\basehttp.py log_message basehttp line:124] "GET /static/asset/img/load.png HTTP/1.1" 200 10130
+[2018-01-22 17:13:13,427] [INFO] [D:\jfcn\lib\site-packages\django\core\servers\basehttp.py log_message basehttp line:124] "GET /static/public/index/fonts/fontawesome-webfont.woff2?v=4.3.0 HTTP/1.1" 200 56780
+[2018-01-22 17:13:13,498] [WARNING] [D:\jfcn\lib\site-packages\django\core\handlers\base.py get_response base line:152] Not Found: /favicon.ico
+[2018-01-22 17:13:13,499] [WARNING] [D:\jfcn\lib\site-packages\django\core\servers\basehttp.py log_message basehttp line:124] "GET /favicon.ico HTTP/1.1" 404 2849
+[2018-01-22 17:13:16,310] [INFO] [D:\workspace\ProjectOne\jfcnproject\public\views.py siteindex views line:60] 进入站点导航视图
+[2018-01-22 17:13:16,310] [INFO] [D:\workspace\ProjectOne\jfcnproject\public\views.py siteindex views line:61] 获取站点导航数据开始
+[2018-01-22 17:13:16,311] [INFO] [D:\workspace\ProjectOne\jfcnproject\public\views.py siteindex views line:63] 站点导航，开始查询[xx]系统导航数据
+[2018-01-22 17:13:16,311] [INFO] [D:\workspace\ProjectOne\jfcnproject\public\views.py siteindex views line:66] 获取站点导航数据结束
+[2018-01-22 17:13:16,312] [INFO] [D:\workspace\ProjectOne\jfcnproject\public\views.py siteindex views line:70] 返回站点导航数据成功
+[2018-01-22 17:13:16,312] [INFO] [D:\workspace\ProjectOne\jfcnproject\public\views.py siteindex views line:72] 进入站点导航查询xx系统
+[2018-01-22 17:13:16,318] [INFO] [D:\jfcn\lib\site-packages\django\core\servers\basehttp.py log_message basehttp line:124] "GET /public/urlindex/?option=xx HTTP/1.1" 200 6032
+[2018-01-22 17:13:17,053] [INFO] [D:\workspace\ProjectOne\jfcnproject\asset\views.py assetmanagement views line:23] 进入资料管理视图,请求参数为: option=[index],id=[0]
+[2018-01-22 17:13:17,054] [INFO] [D:\workspace\ProjectOne\jfcnproject\asset\views.py assetmanagement views line:29] 资产管理GET请求提交参数:asset_search=[未提交到搜索关键字]、page=[1]、pagenumber=[13]、pagenumber_switch=[0]
+[2018-01-22 17:13:17,055] [INFO] [D:\workspace\ProjectOne\jfcnproject\asset\views.py assetmanagement views line:112] 进入资产管理展示页面
+[2018-01-22 17:13:17,055] [INFO] [D:\workspace\ProjectOne\jfcnproject\asset\views.py assetmanagement views line:114] 资产管理对查询结果进行分页
+[2018-01-22 17:13:17,055] [INFO] [D:\workspace\ProjectOne\jfcnproject\asset\views.py paginatorlist views line:42] 资产管理,对查询结果进行分页,返回当页的所有结果,传入参数为：page=[1]、pagenumber=[13]
+[2018-01-22 17:13:17,057] [INFO] [D:\workspace\ProjectOne\jfcnproject\asset\views.py paginatorlist views line:52] 资产管理,成功返回查询结果
+[2018-01-22 17:13:17,057] [INFO] [D:\workspace\ProjectOne\jfcnproject\asset\views.py assetmanagement views line:121] 返回资产管理界面数据到页面
+[2018-01-22 17:13:17,070] [INFO] [D:\jfcn\lib\site-packages\django\core\servers\basehttp.py log_message basehttp line:124] "GET /asset/asset/index/0/ HTTP/1.1" 200 17251
+[2018-01-22 17:13:17,081] [INFO] [D:\jfcn\lib\site-packages\django\core\servers\basehttp.py log_message basehttp line:124] "GET /static/asset/js/asset.js HTTP/1.1" 200 840
+[2018-01-22 17:13:17,835] [INFO] [D:\workspace\ProjectOne\jfcnproject\servers\views.py appopt views line:106] 进入应用管理视图
+[2018-01-22 17:13:17,835] [INFO] [D:\workspace\ProjectOne\jfcnproject\servers\views.py appopt views line:115] 进入应用管理展示界面
+[2018-01-22 17:13:17,836] [INFO] [D:\workspace\ProjectOne\jfcnproject\servers\views.py appopt views line:117] 应用管理数据库查询,返回数据给页面
+[2018-01-22 17:13:17,922] [INFO] [D:\jfcn\lib\site-packages\django\core\servers\basehttp.py log_message basehttp line:124] "GET /servers/appopt/index/ HTTP/1.1" 200 8872
+[2018-01-22 17:13:19,363] [INFO] [D:\jfcn\lib\site-packages\django\core\servers\basehttp.py log_message basehttp line:124] "GET /ywdocument/index/ HTTP/1.1" 200 10009
+[2018-01-22 17:13:19,385] [INFO] [D:\jfcn\lib\site-packages\django\core\servers\basehttp.py log_message basehttp line:124] "GET /static/ywdocument/css/bootstrap.min.css HTTP/1.1" 200 117134
+[2018-01-22 17:13:19,387] [INFO] [D:\jfcn\lib\site-packages\django\core\servers\basehttp.py log_message basehttp line:124] "GET /static/ywdocument/css/pace.css HTTP/1.1" 200 189
+[2018-01-22 17:13:19,388] [INFO] [D:\jfcn\lib\site-packages\django\core\servers\basehttp.py log_message basehttp line:124] "GET /static/ywdocument/css/ionicons.min.css HTTP/1.1" 200 51295
+[2018-01-22 17:13:19,390] [INFO] [D:\jfcn\lib\site-packages\django\core\servers\basehttp.py log_message basehttp line:124] "GET /static/ywdocument/css/highlights/github.css HTTP/1.1" 200 4077
+[2018-01-22 17:13:19,390] [INFO] [D:\jfcn\lib\site-packages\django\core\servers\basehttp.py log_message basehttp line:124] "GET /static/ywdocument/css/custom.css HTTP/1.1" 200 15520
+[2018-01-22 17:13:19,397] [INFO] [D:\jfcn\lib\site-packages\django\core\servers\basehttp.py log_message basehttp line:124] "GET /static/ywdocument/js/bootstrap.min.js HTTP/1.1" 200 35458
+[2018-01-22 17:13:19,397] [INFO] [D:\jfcn\lib\site-packages\django\core\servers\basehttp.py log_message basehttp line:124] "GET /static/ywdocument/js/jquery-2.1.3.min.js HTTP/1.1" 200 84322
+[2018-01-22 17:13:19,397] [INFO] [D:\jfcn\lib\site-packages\django\core\servers\basehttp.py log_message basehttp line:124] "GET /static/ywdocument/js/pace.min.js HTTP/1.1" 200 12332
+[2018-01-22 17:13:19,400] [INFO] [D:\jfcn\lib\site-packages\django\core\servers\basehttp.py log_message basehttp line:124] "GET /static/ywdocument/js/script.js HTTP/1.1" 200 4461
+[2018-01-22 17:13:19,400] [INFO] [D:\jfcn\lib\site-packages\django\core\servers\basehttp.py log_message basehttp line:124] "GET /static/ywdocument/js/modernizr.custom.js HTTP/1.1" 200 8374
+[2018-01-22 17:13:19,437] [WARNING] [D:\jfcn\lib\site-packages\django\core\servers\basehttp.py log_message basehttp line:124] "GET /static/ywdocument/fonts/ionicons.ttf?v=2.0.1 HTTP/1.1" 404 1708
+[2018-01-22 17:13:19,456] [WARNING] [D:\jfcn\lib\site-packages\django\core\servers\basehttp.py log_message basehttp line:124] "GET /static/ywdocument/fonts/ionicons.woff?v=2.0.1 HTTP/1.1" 404 1711
+[2018-01-22 17:13:20,814] [INFO] [D:\workspace\ProjectOne\jfcnproject\public\views.py indexpage views line:79] 进入网站首页
+[2018-01-22 17:13:20,814] [INFO] [D:\workspace\ProjectOne\jfcnproject\public\views.py indexpage views line:80] 返回首页数据
+[2018-01-22 17:13:20,821] [INFO] [D:\jfcn\lib\site-packages\django\core\servers\basehttp.py log_message basehttp line:124] "GET /public/index/ HTTP/1.1" 200 10646
+[2018-01-22 17:17:13,903] [INFO] [D:\workspace\ProjectOne\jfcnproject\ywdocument\views.py IndexView views line:17] 进入应用运维资料管理类视图
+[2018-01-22 17:17:13,903] [INFO] [D:\workspace\ProjectOne\jfcnproject\ywdocument\views.py PostDetailView views line:139] 进入应用运维资料详细类视图
+[2018-01-22 17:17:13,904] [INFO] [D:\workspace\ProjectOne\jfcnproject\ywdocument\views.py CategoryView views line:179] 进入应用运维资料分类类视图
+[2018-01-22 17:17:13,904] [INFO] [D:\workspace\ProjectOne\jfcnproject\ywdocument\views.py TagView views line:195] 进入标签类视图
+[2018-01-22 17:19:17,832] [INFO] [D:\workspace\ProjectOne\jfcnproject\ywdocument\views.py IndexView views line:17] 进入应用运维资料管理类视图
+[2018-01-22 17:19:17,832] [INFO] [D:\workspace\ProjectOne\jfcnproject\ywdocument\views.py PostDetailView views line:139] 进入应用运维资料详细类视图
+[2018-01-22 17:19:17,833] [INFO] [D:\workspace\ProjectOne\jfcnproject\ywdocument\views.py CategoryView views line:179] 进入应用运维资料分类类视图
+[2018-01-22 17:19:17,833] [INFO] [D:\workspace\ProjectOne\jfcnproject\ywdocument\views.py TagView views line:195] 进入标签类视图
+[2018-01-22 17:22:13,612] [INFO] [D:\workspace\ProjectOne\jfcnproject\ywdocument\views.py IndexView views line:17] 进入应用运维资料管理类视图
+[2018-01-22 17:22:13,613] [INFO] [D:\workspace\ProjectOne\jfcnproject\ywdocument\views.py PostDetailView views line:139] 进入应用运维资料详细类视图
+[2018-01-22 17:22:13,613] [INFO] [D:\workspace\ProjectOne\jfcnproject\ywdocument\views.py CategoryView views line:179] 进入应用运维资料分类类视图
+[2018-01-22 17:22:13,613] [INFO] [D:\workspace\ProjectOne\jfcnproject\ywdocument\views.py TagView views line:195] 进入标签类视图
+[2018-01-22 17:24:15,020] [INFO] [D:\workspace\ProjectOne\jfcnproject\ywdocument\views.py IndexView views line:17] 进入应用运维资料管理类视图
+[2018-01-22 17:24:15,021] [INFO] [D:\workspace\ProjectOne\jfcnproject\ywdocument\views.py PostDetailView views line:139] 进入应用运维资料详细类视图
+[2018-01-22 17:24:15,021] [INFO] [D:\workspace\ProjectOne\jfcnproject\ywdocument\views.py CategoryView views line:179] 进入应用运维资料分类类视图
+[2018-01-22 17:24:15,022] [INFO] [D:\workspace\ProjectOne\jfcnproject\ywdocument\views.py TagView views line:195] 进入标签类视图
+[2018-01-22 17:25:57,337] [INFO] [D:\workspace\ProjectOne\jfcnproject\ywdocument\views.py IndexView views line:17] 进入应用运维资料管理类视图
+[2018-01-22 17:25:57,337] [INFO] [D:\workspace\ProjectOne\jfcnproject\ywdocument\views.py PostDetailView views line:139] 进入应用运维资料详细类视图
+[2018-01-22 17:25:57,338] [INFO] [D:\workspace\ProjectOne\jfcnproject\ywdocument\views.py CategoryView views line:179] 进入应用运维资料分类类视图
+[2018-01-22 17:25:57,338] [INFO] [D:\workspace\ProjectOne\jfcnproject\ywdocument\views.py TagView views line:195] 进入标签类视图
+[2018-01-22 17:26:03,032] [INFO] [D:\workspace\ProjectOne\jfcnproject\servers\views.py serveropt views line:37] 进入服务器基础操作视图
+[2018-01-22 17:26:03,033] [INFO] [D:\workspace\ProjectOne\jfcnproject\servers\views.py serveropt views line:104] 返回服务器基础操作页面
+[2018-01-22 17:26:03,051] [INFO] [D:\jfcn\lib\site-packages\django\core\servers\basehttp.py log_message basehttp line:124] "GET /servers/serveropt/ HTTP/1.1" 200 12693
+[2018-01-22 17:26:03,066] [INFO] [D:\jfcn\lib\site-packages\django\core\servers\basehttp.py log_message basehttp line:124] "GET /static/asset/css/index.css HTTP/1.1" 304 0
+[2018-01-22 17:26:03,067] [INFO] [D:\jfcn\lib\site-packages\django\core\servers\basehttp.py log_message basehttp line:124] "GET /static/asset/css/repeat.css HTTP/1.1" 304 0
+[2018-01-22 17:26:03,069] [INFO] [D:\jfcn\lib\site-packages\django\core\servers\basehttp.py log_message basehttp line:124] "GET /static/smallfun/css/yunwei.css HTTP/1.1" 304 0
+[2018-01-22 17:26:03,071] [INFO] [D:\jfcn\lib\site-packages\django\core\servers\basehttp.py log_message basehttp line:124] "GET /static/nav/css/nav.css HTTP/1.1" 304 0
+[2018-01-22 17:26:03,072] [INFO] [D:\jfcn\lib\site-packages\django\core\servers\basehttp.py log_message basehttp line:124] "GET /static/nav/font/iconfont.css HTTP/1.1" 304 0
+[2018-01-22 17:26:03,070] [INFO] [D:\jfcn\lib\site-packages\django\core\servers\basehttp.py log_message basehttp line:124] "GET /static/asset/js/jquery-2.1.1.min.js HTTP/1.1" 304 0
+[2018-01-22 17:26:03,073] [INFO] [D:\jfcn\lib\site-packages\django\core\servers\basehttp.py log_message basehttp line:124] "GET /static/asset/js/index.js HTTP/1.1" 304 0
+[2018-01-22 17:26:03,080] [INFO] [D:\jfcn\lib\site-packages\django\core\servers\basehttp.py log_message basehttp line:124] "GET /static/servers/css/servers_index.css HTTP/1.1" 200 1864
+[2018-01-22 17:26:03,081] [INFO] [D:\jfcn\lib\site-packages\django\core\servers\basehttp.py log_message basehttp line:124] "GET /static/nav/js/jquery.min.js HTTP/1.1" 304 0
+[2018-01-22 17:26:03,083] [INFO] [D:\jfcn\lib\site-packages\django\core\servers\basehttp.py log_message basehttp line:124] "GET /static/nav/js/nav.js HTTP/1.1" 304 0
+[2018-01-22 17:26:03,087] [INFO] [D:\jfcn\lib\site-packages\django\core\servers\basehttp.py log_message basehttp line:124] "GET /static/asset/img/load.png HTTP/1.1" 304 0
+[2018-01-22 17:26:03,088] [INFO] [D:\jfcn\lib\site-packages\django\core\servers\basehttp.py log_message basehttp line:124] "GET /static/servers/js/jquery_2.0.0.js HTTP/1.1" 200 248951
+[2018-01-22 17:26:03,092] [INFO] [D:\jfcn\lib\site-packages\django\core\servers\basehttp.py log_message basehttp line:124] "GET /static/servers/img/serveropt_loading.gif HTTP/1.1" 200 5626
+[2018-01-22 17:26:05,408] [INFO] [D:\workspace\ProjectOne\jfcnproject\public\views.py indexpage views line:86] 进入网站首页
+[2018-01-22 17:26:05,408] [INFO] [D:\workspace\ProjectOne\jfcnproject\public\views.py indexpage views line:87] 返回首页数据
+[2018-01-22 17:26:05,414] [INFO] [D:\jfcn\lib\site-packages\django\core\servers\basehttp.py log_message basehttp line:124] "GET /public/index/ HTTP/1.1" 200 10606
+[2018-01-22 17:26:05,425] [INFO] [D:\jfcn\lib\site-packages\django\core\servers\basehttp.py log_message basehttp line:124] "GET /static/public/index/css/bootstrap_noresponsive.css HTTP/1.1" 304 0
+[2018-01-22 17:26:05,425] [INFO] [D:\jfcn\lib\site-packages\django\core\servers\basehttp.py log_message basehttp line:124] "GET /static/public/index/css/font-awesome.css HTTP/1.1" 304 0
+[2018-01-22 17:26:05,428] [INFO] [D:\jfcn\lib\site-packages\django\core\servers\basehttp.py log_message basehttp line:124] "GET /static/public/index/css/bk.css HTTP/1.1" 304 0
+[2018-01-22 17:26:05,430] [INFO] [D:\jfcn\lib\site-packages\django\core\servers\basehttp.py log_message basehttp line:124] "GET /static/public/index/css/main.css HTTP/1.1" 304 0
+[2018-01-22 17:26:05,434] [INFO] [D:\jfcn\lib\site-packages\django\core\servers\basehttp.py log_message basehttp line:124] "GET /static/public/index/js/index.js HTTP/1.1" 304 0
+[2018-01-22 17:26:05,436] [INFO] [D:\jfcn\lib\site-packages\django\core\servers\basehttp.py log_message basehttp line:124] "GET /static/public/index/js/jquery-1.10.2.min.js HTTP/1.1" 304 0
+[2018-01-22 17:26:05,436] [INFO] [D:\jfcn\lib\site-packages\django\core\servers\basehttp.py log_message basehttp line:124] "GET /static/public/index/js/bootstrap.min.js HTTP/1.1" 304 0
+[2018-01-22 17:26:05,458] [INFO] [D:\jfcn\lib\site-packages\django\core\servers\basehttp.py log_message basehttp line:124] "GET /static/public/index/fonts/fontawesome-webfont.woff2?v=4.3.0 HTTP/1.1" 304 0
+[2018-01-22 17:26:13,616] [INFO] [D:\workspace\ProjectOne\jfcnproject\public\views.py siteindex views line:60] 进入站点导航视图
+[2018-01-22 17:26:13,617] [INFO] [D:\workspace\ProjectOne\jfcnproject\public\views.py siteindex views line:61] 获取站点导航数据开始
+[2018-01-22 17:26:13,618] [INFO] [D:\workspace\ProjectOne\jfcnproject\public\views.py siteindex views line:66] 进入日志下载视图,判断当前操作系统为 Windows,成功设置日志路径
+[2018-01-22 17:26:13,618] [INFO] [D:\workspace\ProjectOne\jfcnproject\public\views.py siteindex views line:70] 站点导航，开始查询[xx]系统导航数据
+[2018-01-22 17:26:13,619] [INFO] [D:\workspace\ProjectOne\jfcnproject\public\views.py siteindex views line:73] 获取站点导航数据结束
+[2018-01-22 17:26:13,619] [INFO] [D:\workspace\ProjectOne\jfcnproject\public\views.py siteindex views line:77] 返回站点导航数据成功
+[2018-01-22 17:26:13,619] [INFO] [D:\workspace\ProjectOne\jfcnproject\public\views.py siteindex views line:79] 进入站点导航查询xx系统
+[2018-01-22 17:26:13,626] [INFO] [D:\jfcn\lib\site-packages\django\core\servers\basehttp.py log_message basehttp line:124] "GET /public/urlindex/?option=xx HTTP/1.1" 200 5992
+[2018-01-22 17:26:45,006] [INFO] [D:\workspace\ProjectOne\jfcnproject\ywdocument\views.py IndexView views line:17] 进入应用运维资料管理类视图
+[2018-01-22 17:26:45,007] [INFO] [D:\workspace\ProjectOne\jfcnproject\ywdocument\views.py PostDetailView views line:139] 进入应用运维资料详细类视图
+[2018-01-22 17:26:45,007] [INFO] [D:\workspace\ProjectOne\jfcnproject\ywdocument\views.py CategoryView views line:179] 进入应用运维资料分类类视图
+[2018-01-22 17:26:45,008] [INFO] [D:\workspace\ProjectOne\jfcnproject\ywdocument\views.py TagView views line:195] 进入标签类视图
+[2018-01-22 17:27:49,275] [INFO] [D:\workspace\ProjectOne\jfcnproject\ywdocument\views.py IndexView views line:17] 进入应用运维资料管理类视图
+[2018-01-22 17:27:49,275] [INFO] [D:\workspace\ProjectOne\jfcnproject\ywdocument\views.py PostDetailView views line:139] 进入应用运维资料详细类视图
+[2018-01-22 17:27:49,275] [INFO] [D:\workspace\ProjectOne\jfcnproject\ywdocument\views.py CategoryView views line:179] 进入应用运维资料分类类视图
+[2018-01-22 17:27:49,276] [INFO] [D:\workspace\ProjectOne\jfcnproject\ywdocument\views.py TagView views line:195] 进入标签类视图
+[2018-01-22 17:31:13,057] [INFO] [D:\workspace\ProjectOne\jfcnproject\ywdocument\views.py IndexView views line:17] 进入应用运维资料管理类视图
+[2018-01-22 17:31:13,057] [INFO] [D:\workspace\ProjectOne\jfcnproject\ywdocument\views.py PostDetailView views line:139] 进入应用运维资料详细类视图
+[2018-01-22 17:31:13,057] [INFO] [D:\workspace\ProjectOne\jfcnproject\ywdocument\views.py CategoryView views line:179] 进入应用运维资料分类类视图
+[2018-01-22 17:31:13,058] [INFO] [D:\workspace\ProjectOne\jfcnproject\ywdocument\views.py TagView views line:195] 进入标签类视图
+[2018-01-22 17:42:10,132] [INFO] [D:\workspace\ProjectOne\jfcnproject\ywdocument\views.py IndexView views line:17] 进入应用运维资料管理类视图
+[2018-01-22 17:42:10,132] [INFO] [D:\workspace\ProjectOne\jfcnproject\ywdocument\views.py PostDetailView views line:139] 进入应用运维资料详细类视图
+[2018-01-22 17:42:10,133] [INFO] [D:\workspace\ProjectOne\jfcnproject\ywdocument\views.py CategoryView views line:179] 进入应用运维资料分类类视图
+[2018-01-22 17:42:10,133] [INFO] [D:\workspace\ProjectOne\jfcnproject\ywdocument\views.py TagView views line:195] 进入标签类视图
+[2018-01-22 17:44:51,489] [INFO] [D:\workspace\ProjectOne\jfcnproject\ywdocument\views.py IndexView views line:17] 进入应用运维资料管理类视图
+[2018-01-22 17:44:51,526] [INFO] [D:\workspace\ProjectOne\jfcnproject\ywdocument\views.py PostDetailView views line:139] 进入应用运维资料详细类视图
+[2018-01-22 17:44:51,533] [INFO] [D:\workspace\ProjectOne\jfcnproject\ywdocument\views.py CategoryView views line:179] 进入应用运维资料分类类视图
+[2018-01-22 17:44:51,627] [INFO] [D:\workspace\ProjectOne\jfcnproject\ywdocument\views.py TagView views line:195] 进入标签类视图
+[2018-01-22 17:45:30,099] [INFO] [D:\workspace\ProjectOne\jfcnproject\ywdocument\views.py IndexView views line:17] 进入应用运维资料管理类视图
+[2018-01-22 17:45:30,099] [INFO] [D:\workspace\ProjectOne\jfcnproject\ywdocument\views.py PostDetailView views line:139] 进入应用运维资料详细类视图
+[2018-01-22 17:45:30,099] [INFO] [D:\workspace\ProjectOne\jfcnproject\ywdocument\views.py CategoryView views line:179] 进入应用运维资料分类类视图
+[2018-01-22 17:45:30,100] [INFO] [D:\workspace\ProjectOne\jfcnproject\ywdocument\views.py TagView views line:195] 进入标签类视图
+[2018-01-22 17:45:40,779] [INFO] [D:\workspace\ProjectOne\jfcnproject\asset\views.py assetmanagement views line:23] 进入资料管理视图,请求参数为: option=[index],id=[0]
+[2018-01-22 17:45:40,779] [INFO] [D:\workspace\ProjectOne\jfcnproject\asset\views.py assetmanagement views line:29] 资产管理GET请求提交参数:asset_search=[未提交到搜索关键字]、page=[1]、pagenumber=[13]、pagenumber_switch=[0]
+[2018-01-22 17:45:40,780] [INFO] [D:\workspace\ProjectOne\jfcnproject\asset\views.py assetmanagement views line:112] 进入资产管理展示页面
+[2018-01-22 17:45:40,780] [INFO] [D:\workspace\ProjectOne\jfcnproject\asset\views.py assetmanagement views line:114] 资产管理对查询结果进行分页
+[2018-01-22 17:45:40,780] [INFO] [D:\workspace\ProjectOne\jfcnproject\asset\views.py paginatorlist views line:42] 资产管理,对查询结果进行分页,返回当页的所有结果,传入参数为：page=[1]、pagenumber=[13]
+[2018-01-22 17:45:40,782] [INFO] [D:\workspace\ProjectOne\jfcnproject\asset\views.py paginatorlist views line:52] 资产管理,成功返回查询结果
+[2018-01-22 17:45:40,783] [INFO] [D:\workspace\ProjectOne\jfcnproject\asset\views.py assetmanagement views line:121] 返回资产管理界面数据到页面
+[2018-01-22 17:45:40,808] [INFO] [D:\jfcn\lib\site-packages\django\core\servers\basehttp.py log_message basehttp line:124] "GET /asset/asset/index/0/ HTTP/1.1" 200 17211
+[2018-01-22 17:45:41,440] [INFO] [D:\workspace\ProjectOne\jfcnproject\servers\views.py appopt views line:115] 进入应用管理视图
+[2018-01-22 17:45:41,441] [INFO] [D:\workspace\ProjectOne\jfcnproject\servers\views.py appopt views line:124] 进入应用管理展示界面
+[2018-01-22 17:45:41,442] [INFO] [D:\workspace\ProjectOne\jfcnproject\servers\views.py appopt views line:126] 应用管理数据库查询,返回数据给页面
+[2018-01-22 17:45:41,505] [INFO] [D:\jfcn\lib\site-packages\django\core\servers\basehttp.py log_message basehttp line:124] "GET /servers/appopt/index/ HTTP/1.1" 200 8832
