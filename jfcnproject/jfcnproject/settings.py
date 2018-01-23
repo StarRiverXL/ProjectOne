@@ -133,7 +133,7 @@ USE_L10N = True
 
 USE_TZ = False  # 解决 while time zone support is active 问题
 
-LOGIN_URL = '/asset/login/'
+LOGIN_URL = '/public/login/'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/

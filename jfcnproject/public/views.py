@@ -55,7 +55,7 @@ def checkuser(request):
         return render(request, 'login.html', {"login_info_list": login_info_list})
 
 
-# @login_required
+@login_required
 def siteindex(request):
     logger.info("进入站点导航视图")
     logger.info("获取站点导航数据开始")
@@ -75,6 +75,7 @@ def siteindex(request):
     return render(request, 'public/url_index.html', {'site_nav_list': site_nav})
 
 
+@login_required
 def indexpage(request):
     logger.info("进入网站首页")
     logger.info("返回首页数据")
