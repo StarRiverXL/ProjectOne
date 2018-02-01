@@ -26,6 +26,7 @@ urlpatterns = [
     url(r'^servers/', include('servers.urls')),
     url(r'^ywdocument/', include('ywdocument.urls')),
     url(r'^samllfun/', include('smallfun.urls')),
+    url(r'^interface/', include('interface.urls')),
     url(r'^$', pub_index.checkuser),
     url(r'^index/', pub_index.indexpage),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)   # 图片访问地址
