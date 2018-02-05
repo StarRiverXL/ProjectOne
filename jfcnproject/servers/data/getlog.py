@@ -9,6 +9,7 @@ import logging
 import string
 import time
 import re
+import platform
 logger = logging.getLogger('django')
 
 
@@ -347,8 +348,13 @@ class ServerOptControl(object):
                             "返回详细信息:{1}".format(download_file_name, messages["sed_download_file"]))
                 logger.info("获取日志,开始执行下载命令,文件名: %s" % download_file_name)
                 cmd_ssh = SSHConnection(self.ip, self.ip_username, self.ip_passwd, self.ip_port)
-                data = cmd_ssh.get_file("/tmp/yunwei_platform_special_tmp/%s" %
-                                        download_file_name, "data\\downloadlog\\%s" % download_file_name)
+                system_version = platform.system()
+                if system_version == "Windows":
+                    data = cmd_ssh.get_file("/tmp/yunwei_platform_special_tmp/%s" %
+                                            download_file_name, "data\\downloadlog\\%s" % download_file_name)
+                elif system_version == "Linux":
+                    data = cmd_ssh.get_file("/tmp/yunwei_platform_special_tmp/%s" %
+                                            download_file_name, "data/downloadlog/%s" % download_file_name)
                 logger.info("获取日志,下载文件返回详细信息: %s" % data)
                 logger.info("获取日志,下载命令执行完成文件名: %s" % download_file_name)
                 messages["result"] = ["%s_%s" % (download_path_name, localtime_download)]
