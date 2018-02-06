@@ -16,4 +16,5 @@
     项目基于python3、django1.11进行开发
     部署说明：生产环境部署使用 Nginx + Gunicorn
   
-
+### 部分效果图展示
+![alt text](/jfcnproject/static/ywdocument/img/me.jpg "title")
