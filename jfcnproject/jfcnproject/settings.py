@@ -32,7 +32,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '#y=@t*i24lt%n3ag*8-n)(ugah+_%k^#9d&v3x1%j+u))m_l^x'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 # * 允许所有机器访问
 ALLOWED_HOSTS = ["*"]
@@ -136,18 +136,24 @@ USE_TZ = False  # 解决 while time zone support is active 问题
 
 LOGIN_URL = '/public/login/'
 
-# Static files (CSS, JavaScript, Images)
+# 参考文章:
+# https://www.cnblogs.com/wenjiashe521/archive/2012/11/06/2756779.html
+# http://blog.csdn.net/junli_chen/article/details/47335919
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
-# 配置单独app下的静态文件
+# Static files (CSS, JavaScript, Images)
+
 STATIC_URL = '/static/'
-# 配置整个project下的静态文件
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, "static"),   # 首选project静态文件搜寻路径
-    '/var/www/static/',   # 第二选project静态文件搜寻路径，还可以有第三选，第四选……
-)
-# 说明：先访问app下的static/文件夹，若在文件夹下面找不到，则访问project中的static/文件夹，若有则返回，若没有则去/var/www/static/中寻找。
-# 实验的具体情况是想访问项目，再访问app项目的static文件，需要查看官网文档证明。
-# STATIC_ROOT = os.path.join(BASE_DIR, 'static')  # 指明了静态文件的收集目录，即项目根目录（BASE_DIR）下的 static 文件夹。
+# 设置的static file的起始url，这个只是在template里边引用到，这个参数和MEDIA_URL的含义相同
+
+# STATICFILES_DIRS = (
+#    os.path.join(BASE_DIR, "static"),   # 首选project静态文件搜寻路径
+#    '/var/www/static/',   # 第二选project静态文件搜寻路径，还可以有第三选，第四选……
+# )
+# 和TEMPLATE_DIRS的含义差不多，就是除了各个app的static目录以外还需要管理的静态文件设置，比如项目的公共文件
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# 指明了静态文件的收集目录，即项目根目录（BASE_DIR）下的 static 文件夹。
+# 运行上边提到的命令：python manage.py collectstatic 之后静态文件将要复制到的目录，这个目录只有在运行collectstatic时候才会用到
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media').replace('\\', '/')     # 设置静态文件路径为主目录下的media文件夹
 MEDIA_URL = '/media/'                                               # url映射
