@@ -17,4 +17,15 @@
     部署说明：生产环境部署使用 Nginx + Gunicorn
   
 ### 部分效果图展示
-![alt text](/jfcnproject/static/ywdocument/img/me.jpg "title")
+#### 登陆首页
+![alt text](/jfcnproject/media/img/githup_index/login.png "title")
+
+#### 网站首页
+![alt text](/jfcnproject/media/img/githup_index/index.png "title")
+
+#### 网站导航
+![alt text](/jfcnproject/media/img/githup_index/urlindex.png "title")
+
+#### 运维文档详细页面
+![alt text](/jfcnproject/media/img/githup_index/yunweizil.png "title")
+
