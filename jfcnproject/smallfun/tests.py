@@ -6,7 +6,7 @@ from django.test import TestCase
 
 
 
-# <link rel="stylesheet" type="text/css" href="{% static 'smallfun/css/yunwei.css' %}" />
+
 
 
 

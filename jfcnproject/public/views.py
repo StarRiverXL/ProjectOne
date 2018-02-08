@@ -25,9 +25,9 @@ def checkuser(request):
     # 定义验证码图片保存路径
     today_str = datetime.date.today().strftime("%Y%m%d")  # 20170921
     if system_version == "Windows":
-        verify_code_img_path = "%s\\static\\public\\login\\authCode\\%s" % (settings.BASE_DIR, today_str)
+        verify_code_img_path = "%s\\media\\public\\authCode\\%s" % (settings.BASE_DIR, today_str)
     elif system_version == "Linux":
-        verify_code_img_path = "%s/static/public/login/authCode/%s" % (settings.BASE_DIR, today_str)
+        verify_code_img_path = "%s/media/public/authCode/%s" % (settings.BASE_DIR, today_str)
     try:
         if not os.path.isdir(verify_code_img_path):
             os.makedirs(verify_code_img_path)
@@ -38,7 +38,7 @@ def checkuser(request):
     random_filename = gene_text()
     # 生成图片验证码
     random_code = gene_code(verify_code_img_path, random_filename)
-    login_info_list = {"code_name": random_filename, "code_img_path": "/static/public/login/authCode/%s" % today_str}
+    login_info_list = {"code_name": random_filename, "code_img_path": "/media/public/authCode/%s" % today_str}
     # 验证码图片保存结束
     
     logoutuser = request.GET.get('logoutuser')
@@ -143,9 +143,9 @@ def replase_code(request):
     if request.method == "POST":
         today_str = datetime.date.today().strftime("%Y%m%d")  # 20170921
         if system_version == "Windows":
-            verify_code_img_path = "%s\\static\\public\\login\\authCode\\%s" % (settings.BASE_DIR, today_str)
+            verify_code_img_path = "%s\\media\\public\\authCode\\%s" % (settings.BASE_DIR, today_str)
         elif system_version == "Linux":
-            verify_code_img_path = "%s/static/public/login/authCode/%s" % (settings.BASE_DIR, today_str)
+            verify_code_img_path = "%s/media/public/authCode/%s" % (settings.BASE_DIR, today_str)
         # 获取验证码值
         random_filename = gene_text()
         # 生成图片验证码
@@ -153,7 +153,7 @@ def replase_code(request):
         if random_code:
             logger.info("刷新验证码图片保存成功")
             data = {"code_name": random_filename, "status": True,
-                    "code_img_path": "/static/public/login/authCode/%s/" % today_str}
+                    "code_img_path": "/media/public/authCode/%s/" % today_str}
         else:
             logger.error("刷新验证码图片保存失败")
             data = {"code_name": False, "status": False}

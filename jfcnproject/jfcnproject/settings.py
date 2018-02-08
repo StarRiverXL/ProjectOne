@@ -32,7 +32,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '#y=@t*i24lt%n3ag*8-n)(ugah+_%k^#9d&v3x1%j+u))m_l^x'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 # * 允许所有机器访问
 ALLOWED_HOSTS = ["*"]
@@ -145,10 +145,9 @@ LOGIN_URL = '/public/login/'
 STATIC_URL = '/static/'
 # 设置的static file的起始url，这个只是在template里边引用到，这个参数和MEDIA_URL的含义相同
 
-# STATICFILES_DIRS = (
-#    os.path.join(BASE_DIR, "static"),   # 首选project静态文件搜寻路径
-#    '/var/www/static/',   # 第二选project静态文件搜寻路径，还可以有第三选，第四选……
-# )
+STATICFILES_DIRS = (
+   # '/var/www/static/',   # 第二选project静态文件搜寻路径，还可以有第三选，第四选……
+)
 # 和TEMPLATE_DIRS的含义差不多，就是除了各个app的static目录以外还需要管理的静态文件设置，比如项目的公共文件
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')

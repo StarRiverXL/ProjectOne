@@ -9,14 +9,8 @@ import logging, platform
 from django.conf import settings
 logger = logging.getLogger('django')
 
-
-# 字体的位置，不同版本的系统会有不同
-system_version = platform.system()
-if system_version == "Windows":
-    font_path = 'C\:\\Windows\\Fonts\\Arial\\arial.ttf'
-elif system_version == "Linux":
-    font_path = '%s/static/fonts/arial.ttf' % settings.BASE_DIR
-    
+# 设置字体位置
+font_path = '%s/static/public/login/fonts/arial.ttf' % settings.BASE_DIR
 # 生成几位数的验证码
 number = 6
 # 生成验证码图片的高度和宽度
@@ -71,6 +65,7 @@ def gene_code(save_path, code_fine_name):
     image = image.transform((width + 30, height), Image.AFFINE, (1, 0, 0, 0, 1, 0), Image.BILINEAR)  # 创建扭曲
     image = image.filter(ImageFilter.EDGE_ENHANCE_MORE)  # 滤镜，边界加强
     try:
+        system_version = platform.system()
         if system_version == "Windows":
             image.save("%s\\%s.png" % (save_path, code_fine_name))  # 保存验证码图片
             logger.info("验证码图片保存成功,内容为：%s\\%s.png" % (save_path, code_fine_name))
