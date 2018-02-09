@@ -8,12 +8,9 @@ from django.contrib import messages
 from .models import Navigation, SiteNavigation, MonitorPlatform
 
 from django.shortcuts import render, HttpResponse, render_to_response, redirect
-import json
-import datetime
-import os
 from django.conf import settings
 from .data.get_auth_code import *
-
+import json, datetime, os, shutil
 import logging, platform
 
 logger = logging.getLogger('django')
@@ -24,13 +21,18 @@ def checkuser(request):
     logger.info("进入用户登陆视图")
     # 定义验证码图片保存路径
     today_str = datetime.date.today().strftime("%Y%m%d")  # 20170921
+    yesterday_str = (datetime.date.today() + datetime.timedelta(days=-1)).strftime('%Y%m%d')  # 昨天的时间
     if system_version == "Windows":
         verify_code_img_path = "%s\\media\\public\\authCode\\%s" % (settings.BASE_DIR, today_str)
+        yester_code_img_path = "%s\\media\\public\\authCode\\%s" % (settings.BASE_DIR, yesterday_str)
     elif system_version == "Linux":
         verify_code_img_path = "%s/media/public/authCode/%s" % (settings.BASE_DIR, today_str)
+        yester_code_img_path = "%s/media/public/authCode/%s" % (settings.BASE_DIR, yesterday_str)
     try:
         if not os.path.isdir(verify_code_img_path):
             os.makedirs(verify_code_img_path)
+            shutil.rmtree(yester_code_img_path)     # 删除昨天的验证码图片及文件夹
+            logger.info("创建验证码存放路径成功: %s 删除昨天的路径成功: %s" % (verify_code_img_path, yester_code_img_path))
     except Exception as e:
         logger.error("创建保存验证码路径失败，具体原因： %s" % e)
     logger.info("登陆session为: %s" % request.session.session_key)
